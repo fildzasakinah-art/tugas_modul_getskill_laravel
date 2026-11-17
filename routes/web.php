@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\BukuController;
-use App\Http\Controllers\KaryawanController;
+// use App\Http\Controllers\KaryawanController;
 
 // Route::get('/profil/{nama}/{kelas}/{cita}', function ($nama, $kelas, $cita) {
 //     $nama = str_replace('_', ' ', $nama);
@@ -28,9 +28,20 @@ use App\Http\Controllers\KaryawanController;
 
 // Route::get('/buku', [BukuController::class, 'tampil']);
 
-Route::resource('karyawan', KaryawanController::class)->only([
-    'index', 'store', 'destroy'
-]);
+// Route::resource('karyawan', KaryawanController::class)->only([
+//     'index', 'store', 'destroy'
+// ]);
 
+Route::get('/jadwal', function() {
+    return view('jadwal');
+});
+
+Route::get('/nilai', function() {
+    return view('nilai');
+});
+
+Route::get('/absensi', function() {
+    return view('absensi');
+});
 
 
